@@ -1,0 +1,35 @@
+<!-- <?php
+	if(substr( $_SERVER['REQUEST_URI'], 0, 12 ) === "/voorverkoop" || substr( $_SERVER['REQUEST_URI'], 0, 7 ) === "/leding"){
+		header('Location: https://shop.timmerdorp.com/?couponcode='.substr($_SERVER['REQUEST_URI'], 1, strlen($_SERVER['REQUEST_URI'])));
+	}
+?>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 50px;
+		}
+		p{
+			max-width: 400px;
+		}
+	</style>
+	<script>
+	console.log('dingen')
+	</script>
+</head>
+<body>
+	<h1>Kaartverkoop Timmerdorp 2019</h1>
+	<p>Welkom, als je hier terechtgekomen bent ben je waarschijnlijk op zoek naar timmerdorp kaarten.</p>
+	<p>Als je een voorverkoop code heb kun je deze verzilveren op <a href="https://shop.timmerdorp.com">shop.timmerdorp.com</a></p>
+	<p>De code is het deel achter de /, op jouw strookje staat bijv. https://tdorp.nl/leding-abcd dan is jouw code "leding-abcd"</p>
+	<p>Graag tot ziens,</p>
+	<p>Het Timmerdorp Bestuur.</p>
+</body>
+</html>
