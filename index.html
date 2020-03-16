@@ -1,10 +1,3 @@
-<!-- <?php
-	if(substr( $_SERVER['REQUEST_URI'], 0, 12 ) === "/voorverkoop" || substr( $_SERVER['REQUEST_URI'], 0, 7 ) === "/leding"){
-		header('Location: https://shop.timmerdorp.com/?couponcode='.substr($_SERVER['REQUEST_URI'], 1, strlen($_SERVER['REQUEST_URI'])));
-	}
-?>
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +14,11 @@
 		}
 	</style>
 	<script>
-	console.log('dingen')
+	console.log(window.location.pathname)
+	if(window.location.pathname.indexOf('voorverkoop') > -1 || window.location.pathname.indexOf('leding') > -1){
+		let code = window.location.pathname.substr(1,window.location.pathname.length)
+		window.location.href = `https://shop.timmerdorp.com/?couponcode=${code}`
+	}
 	</script>
 </head>
 <body>
