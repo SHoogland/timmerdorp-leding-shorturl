@@ -15,7 +15,11 @@
 	</style>
 	<script>
 	console.log(window.location.pathname)
-	if(window.location.pathname.indexOf('voorverkoop') > -1 || window.location.pathname.indexOf('leding') > -1){
+	if(
+		window.location.pathname.indexOf('voorverkoop') > -1 || 
+		window.location.pathname.indexOf('sponsor') > -1 || 
+		window.location.pathname.indexOf('leding') > -1
+	){
 		let code = window.location.pathname.substr(1,window.location.pathname.length)
 		window.location.href = `https://shop.timmerdorp.com/leiding-code/?code=${code}`
 	}
